@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Intents-and-Splash-Screen</string>
+    <string name="mainTitleTxt">Login Here</string>
+    <string name="tvUsernameHint">Enter Username</string>
+    <string name="tvEmailHint">Enter Email Address</string>
+    <string name="tvPasswordHint">********</string>
+</resources>
