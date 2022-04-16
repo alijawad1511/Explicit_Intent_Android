@@ -14,13 +14,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etUsername,etEmail,etPassword;
+    EditText etEmail,etPassword;
     Button btnLogin,btnSignup;
 
     // Activities Request Codes
     final int SIGNUP_ACTIVITY_CODE = 1;
 
-    ArrayList<User> users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,19 +32,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(checkValidation()){
-                    String username,email,password;
-                    username = etUsername.getText().toString().trim();
+                    String email,password;
                     email = etEmail.getText().toString().trim();
                     password = etPassword.getText().toString().trim();
 
-                    User user = checkuser(email,password);
+                    User user = checkUser(email,password);
 
                     if(user!=null)
                     {
                         // Create Intent
                         // Package Name used in 2nd Param to secure app
                         Intent intent = new Intent(MainActivity.this, com.example.intents_and_splash_screen.HomeActivity.class);
-                        intent.putExtra("usernameKey",user.getUsername());    // To pass data
+                        intent.putExtra("usernameKey",user.getUsername());
                         startActivity(intent);
                         finish();
                     }
@@ -69,8 +67,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private User checkuser(String email, String password) {
-        for(User user:users)
+    private User checkUser(String email, String password) {
+        for(User user:Data.users)
         {
             if(user.getEmail().equals(email) && user.getPassword().equals(password))
             {
@@ -90,8 +88,12 @@ public class MainActivity extends AppCompatActivity {
             case(SIGNUP_ACTIVITY_CODE):
                 if(resultCode==RESULT_OK)
                 {
-                    User user = new User(data.getStringExtra("usernameKey"), data.getStringExtra("emailKey"), data.getStringExtra("passwordKey"));
-                    users.add(user);
+                    User user = new User(
+                            data.getStringExtra("usernameKey"),
+                            data.getStringExtra("emailKey"),
+                            data.getStringExtra("passwordKey"));
+                    Data.addUser(user);
+                    Toast.makeText(this, "Signup successful", Toast.LENGTH_SHORT).show();
                 }
                 else if(resultCode==RESULT_CANCELED)
                 {
@@ -103,11 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean checkValidation() {
         boolean flag = true;
-
-        if(etUsername.getText().toString().trim().isEmpty()){
-            etUsername.setError("Username can't be empty");
-            flag = false;
-        }
 
         if(etEmail.getText().toString().trim().isEmpty()){
             etEmail.setError("Email can't be empty");
@@ -124,12 +121,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
-        etUsername = findViewById(R.id.etUsername);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         btnSignup = findViewById(R.id.btnSignup);
-        users = new ArrayList<>();
     }
 
 

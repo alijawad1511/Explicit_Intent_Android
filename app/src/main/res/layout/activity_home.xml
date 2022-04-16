@@ -4,18 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/tvUsername"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:hint="Username Here"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:hint="Username Here"
+            android:gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:paddingVertical="10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:paddingVertical="10dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_phone"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_location"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:id="@+id/ivWeb"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_web"/>
+
+    </LinearLayout>
 
 </LinearLayout>
