@@ -14,19 +14,19 @@ In this project, I have created two activities MainActivity and HomeActivity. I 
 
 ### Splash Screen
 
-<img src="https://github.com/alijawad1511/Image_Fragments_Android/blob/master/images/Sample.jpg" width="250" />
+<img src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/Splash%20Screen.jpg" width="250" />
 
 ### Login Screen
 
-<img src="https://github.com/alijawad1511/Image_Fragments_Android/blob/master/images/Sample.jpg" width="250" />
+<img src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/Login%20Screen.jpg" width="250" />
 
 ### Signup Screen
 
-<img src="https://github.com/alijawad1511/Image_Fragments_Android/blob/master/images/Sample.jpg" width="250" />
+<img src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/SIgnup%20Screen.jpg" width="250" />
 
 ### Home Screen
 
-<img src="https://github.com/alijawad1511/Image_Fragments_Android/blob/master/images/Sample.jpg" width="250" />
+<img src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/Home%20Screen.jpg" width="250" />
 
 ## 📞 Contact me at:
 
