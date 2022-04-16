@@ -2,7 +2,14 @@
 
 ## 📝 About Project
 
-In this project, I have created two activities MainActivity and HomeActivity. I am taking Data from MainActivity and Passing it to HomeActivity using Explicit Intent
+In this project, I have used Implicit and Explicit Intents concepts. How can we use Implicit and Explicit Contents. I am taking Data from MainActivity and Passing it to HomeActivity using Explicit Intent
+
+### Topics Covered:
+- Splash Screen
+- Use of Vector Assets
+- Implicit Intents
+- Explicit Intents
+
 
 ### Implicit Intents Used:
 
