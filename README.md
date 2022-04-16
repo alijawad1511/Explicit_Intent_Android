@@ -21,7 +21,7 @@ In this project, I have used Implicit and Explicit Intents concepts. How can we 
 
 ### Splash Screen
 
-<img src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/Splash%20Screen.jpg" width="250" />
+<img style="border-radius:10px" src="https://github.com/alijawad1511/Explicit_Intent_Android/blob/master/images/Splash%20Screen.jpg" width="250" />
 
 ### Login Screen
 
